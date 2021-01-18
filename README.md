@@ -47,10 +47,11 @@ srcImg.onload = function () {
 
     ctx.drawImage(this, 0, 0, this.width, this.height);
 
-    floydSteinbergDithering(ctx, palArr, this.width, this.height);
+    floydSteinbergDithering(ctx, palArr, this.width, this.height, 1.2);
 }
 
 srcImg.src = ...
 ```
 After that set the source of the image to a picture you like to display.
 See `index.html` and `main.js` for details.
+You can tweak the results with the `errorMultiplier` parameter. Default value is `1.0`.
